@@ -21,6 +21,26 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+main > section {
+  margin: 2rem 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #d4a373;
+  outline-offset: 2px;
+}
+
 /* Header */
 .site-header {
   display: flex;
@@ -46,10 +66,13 @@ a {
 
 .site-header nav a {
   text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
 }
 
 .site-header nav a:hover {
   color: #d4a373;
+  border-bottom-color: #d4a373;
 }
 
 /* Hero */
@@ -62,6 +85,13 @@ a {
 
 .hero h1 {
   margin-top: 0;
+  font-size: 2.2rem;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 1.1rem;
 }
 
 /* Buttons */
@@ -76,6 +106,7 @@ a {
   font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 .btn:hover,
@@ -104,16 +135,32 @@ a {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
 }
 
 .category-card:hover {
   border-color: #d4a373;
+  transform: translateY(-2px);
+}
+
+/* About page sections */
+.mission,
+.story,
+.contact {
+  max-width: 750px;
 }
 
 /* About page contact list */
 .contact ul {
   list-style: none;
   padding: 0;
+}
+
+.contact li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
 }
 
 /* Store product grid */
@@ -136,10 +183,35 @@ a {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding: 1rem;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.product-card .price {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .product-card img {
@@ -154,6 +226,7 @@ a {
   background: #eee;
   border-radius: 999px;
   font-size: 0.8rem;
+  align-self: flex-start;
 }
 
 /* Pagination */
@@ -171,4 +244,24 @@ a {
   padding: 1rem;
   background: #222;
   color: #fff;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .site-header {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
 }

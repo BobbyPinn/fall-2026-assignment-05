@@ -25,11 +25,11 @@
   },
   {
     "id": 4,
-    "name": "Giorgio Armani Acqua di Giò Profondo",
-    "price": 109.99,
+    "name": "Dior Sauvage Eau de Parfum",
+    "price": 119.99,
     "category": "Summer",
-    "description": "Sea notes, bergamot, and aromatic herbs with a mineral finish. A cool, deep-water take on a classic.",
-    "imageUrl": "./images/acqua-di-gio-profondo.png"
+    "description": "Peppery bergamot over a bold ambroxan base. Fresh, magnetic, and recognizable from across the room.",
+    "imageUrl": "./images/dior-sauvage-edt.png"
   },
   {
     "id": 5,
@@ -73,11 +73,11 @@
   },
   {
     "id": 10,
-    "name": "YSL La Nuit de L'Homme",
-    "price": 104.99,
+    "name": "French Avenue Liquid Brun",
+    "price": 39.99,
     "category": "Fall",
-    "description": "Cardamom and lavender layered over cedar and vetiver. Smooth, seductive, and built for evenings out.",
-    "imageUrl": "./images/la-nuit-de-lhomme.png"
+    "description": "Cinnamon and cardamom melting into bourbon vanilla and praline. A rich amber gourmand that punches way above its price.",
+    "imageUrl": "./images/liquid-brun.png"
   },
   {
     "id": 11,
@@ -89,11 +89,11 @@
   },
   {
     "id": 12,
-    "name": "Versace Eros",
-    "price": 89.99,
+    "name": "Carolina Herrera Bad Boy Cobalt Elixir",
+    "price": 144.99,
     "category": "Fall",
-    "description": "Mint and green apple up top, sweet tonka and vanilla underneath. Loud, playful, and made for going out.",
-    "imageUrl": "./images/versace-eros.png"
+    "description": "Smoky sage and black pepper over black truffle and vanilla. Dark, woody, and made for cool evenings.",
+    "imageUrl": "./images/bad-boy-cobalt-elixir.png"
   },
   {
     "id": 13,
@@ -105,11 +105,11 @@
   },
   {
     "id": 14,
-    "name": "Dior Sauvage Eau de Toilette",
-    "price": 119.99,
+    "name": "YSL MYSLF Le Parfum",
+    "price": 169.99,
     "category": "All-Season",
-    "description": "Peppery bergamot over a bold ambroxan base. Fresh, magnetic, and recognizable from across the room.",
-    "imageUrl": "./images/dior-sauvage-edt.png"
+    "description": "Black pepper and orange blossom over bourbon vanilla and amber. A deeper, sexier take on the original MYSLF.",
+    "imageUrl": "./images/myslf-le-parfum.png"
   },
   {
     "id": 15,

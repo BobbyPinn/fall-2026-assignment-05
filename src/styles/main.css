@@ -126,6 +126,22 @@ button:focus-visible {
   cursor: not-allowed;
 }
 
+/* Home page intro and categories */
+.intro,
+.categories h2 {
+  text-align: center;
+}
+
+.intro p {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Store page "Show all" link */
+.filter-note {
+  margin-top: -0.5rem;
+}
+
 /* Home page categories */
 .category-grid {
   display: grid;

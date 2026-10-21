@@ -1,3 +1,19 @@
+/* Colors and fonts used across the site */
+:root {
+  --ink: #1c1a17;
+  --charcoal: #141311;
+  --text: #2b2824;
+  --muted: #6b645b;
+  --cream: #f7f3ec;
+  --card: #ffffff;
+  --line: #e7e0d4;
+  --gold: #c9a45c;
+  --gold-dark: #a8843f;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
 /* Base */
 * {
   box-sizing: border-box;
@@ -5,10 +21,10 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #222;
-  background: #fafafa;
-  line-height: 1.5;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
   /* Keeps the footer at the bottom on short pages */
   display: flex;
   flex-direction: column;
@@ -20,7 +36,7 @@ main {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 a {
@@ -34,17 +50,65 @@ img {
 h1,
 h2,
 h3 {
+  font-family: var(--serif);
+  font-weight: normal;
   line-height: 1.2;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 1.9rem;
 }
 
 main > section {
-  margin: 2rem 0;
+  margin: 3.5rem 0;
+}
+
+main > section:first-child {
+  margin-top: 0;
+}
+
+/* Store page title */
+main > h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+/* Thin gold line under section headings */
+.intro h2::after,
+.categories h2::after,
+.mission h2::after,
+.story h2::after,
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin-top: 0.75rem;
+  background: var(--gold);
+}
+
+.intro h2::after,
+.categories h2::after,
+.mission h2::after,
+.story h2::after,
+.contact h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the About page headings */
+.mission h2,
+.story h2,
+.contact h2 {
+  text-align: center;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #d4a373;
-  outline-offset: 2px;
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 /* Header */
@@ -54,75 +118,104 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2rem;
-  background: #222;
+  padding: 1.25rem 2.5rem;
+  background: var(--charcoal);
   color: #fff;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.4);
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
   text-decoration: none;
+  color: var(--gold);
 }
 
 .site-header nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .site-header nav a {
   text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .site-header nav a:hover {
-  color: #d4a373;
-  border-bottom-color: #d4a373;
+  color: var(--gold);
+  border-bottom-color: var(--gold);
 }
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 3rem 1rem;
-  background: #eee;
-  border-radius: 8px;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(160deg, #26231f, var(--charcoal));
+  border-radius: 12px;
+  color: #fff;
 }
 
 .hero h1 {
   margin-top: 0;
-  font-size: 2.2rem;
+  color: #fff;
+  font-size: 3rem;
 }
 
 .hero p {
-  margin-bottom: 1.5rem;
-  color: #555;
-  font-size: 1.1rem;
+  margin: 0 auto 2rem;
+  max-width: 520px;
+  color: #d8d0c3;
+  font-size: 1.15rem;
 }
 
 /* Buttons */
 .btn,
 .pagination button {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 4px;
-  background: #222;
-  color: #fff;
-  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
 }
 
 .btn:hover,
 .pagination button:hover:not(:disabled) {
-  background: #d4a373;
+  background: transparent;
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+
+/* On the light store page, hover goes dark instead of see-through */
+.pagination button:hover:not(:disabled) {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
 }
 
 .pagination button:disabled {
-  background: #ccc;
-  color: #777;
+  background: transparent;
+  border-color: var(--line);
+  color: #b3aca1;
   cursor: not-allowed;
 }
 
@@ -135,11 +228,19 @@ button:focus-visible {
 .intro p {
   max-width: 650px;
   margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.1rem;
 }
 
 /* Store page "Show all" link */
 .filter-note {
-  margin-top: -0.5rem;
+  margin: -0.5rem 0 1.5rem;
+  text-align: center;
+}
+
+.filter-note a {
+  color: var(--gold-dark);
+  font-size: 0.9rem;
 }
 
 /* Home page categories */
@@ -150,21 +251,61 @@ button:focus-visible {
 }
 
 .category-card {
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   text-align: center;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: bold;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink);
   transition:
     border-color 0.2s,
-    transform 0.2s;
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .category-card:hover {
-  border-color: #d4a373;
-  transform: translateY(-2px);
+  border-color: var(--season, var(--gold));
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(28, 26, 23, 0.08);
+}
+
+/* Season colors: soft tint and colored text */
+.category-card[class*='season-'] {
+  background: var(--season-tint);
+  color: var(--season-text);
+}
+
+.season-winter {
+  --season: #5b8fc7;
+  --season-tint: #eef4fb;
+  --season-text: #2f5f8f;
+}
+
+.season-spring {
+  --season: #d987a8;
+  --season-tint: #fcf0f5;
+  --season-text: #a8506f;
+}
+
+.season-summer {
+  --season: #22a8bf;
+  --season-tint: #e9f8fa;
+  --season-text: #13798b;
+}
+
+.season-fall {
+  --season: #d2772f;
+  --season-tint: #fdf2e8;
+  --season-text: #9c5016;
+}
+
+.season-all-season {
+  --season: var(--gold);
+  --season-tint: #faf5ea;
+  --season-text: var(--gold-dark);
 }
 
 /* About page sections */
@@ -172,24 +313,37 @@ button:focus-visible {
 .story,
 .contact {
   max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission p,
+.story p {
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 /* About page contact list */
 .contact ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 .contact li {
-  padding: 0.4rem 0;
-  border-bottom: 1px solid #eee;
+  padding: 0.35rem 0;
+}
+
+.contact strong {
+  color: var(--gold-dark);
+  font-weight: 600;
 }
 
 /* Store product grid */
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 600px) {
@@ -207,47 +361,58 @@ button:focus-visible {
 .product-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  transition: box-shadow 0.2s;
+  gap: 0.6rem;
+  padding: 1rem 1rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
 }
 
 .product-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(28, 26, 23, 0.1);
 }
 
 .product-card h3 {
-  margin: 0;
-  font-size: 1.1rem;
+  margin: 0.4rem 0 0;
+  font-size: 1.25rem;
 }
 
 .product-card p {
   margin: 0;
-  color: #555;
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
 .product-card .price {
-  color: #222;
-  font-size: 1.1rem;
-  font-weight: bold;
+  color: var(--gold-dark);
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
+/* Soft panel behind each bottle */
 .product-card img {
   width: 100%;
-  height: 220px;
+  height: 240px;
+  padding: 1rem;
   object-fit: contain;
+  background: linear-gradient(180deg, #faf8f4, #efe9df);
+  border-radius: 8px;
 }
 
 .category-badge {
   display: inline-block;
-  padding: 0.2rem 0.6rem;
-  background: #eee;
+  padding: 0.2rem 0.75rem;
+  border: 1px solid var(--gold);
   border-radius: 999px;
-  font-size: 0.8rem;
+  color: var(--gold-dark);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   align-self: flex-start;
 }
 
@@ -256,34 +421,64 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin: 2rem 0;
+  gap: 1.25rem;
+  margin: 3rem 0 1rem;
+}
+
+#page-indicator {
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
 }
 
 /* Footer */
 .site-footer {
   text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
+  padding: 2rem 1rem;
+  background: var(--charcoal);
+  color: #b3aca1;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(201, 164, 92, 0.4);
 }
 
 .site-footer p {
   margin: 0.25rem 0;
 }
 
+.site-footer p:first-child {
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
 /* Small screens */
 @media (max-width: 600px) {
   .site-header {
-    justify-content: center;
+    flex-direction: column;
     padding: 1rem;
   }
 
+  .site-header nav {
+    gap: 1.25rem;
+  }
+
   .hero {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .hero h1 {
-    font-size: 1.7rem;
+    font-size: 2rem;
+  }
+
+  h2,
+  main > h1 {
+    font-size: 1.6rem;
+  }
+
+  .pagination {
+    gap: 0.75rem;
+  }
+
+  .pagination button {
+    padding: 0.65rem 1.1rem;
   }
 }

@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Azzaro The Most Wanted Parfum",
+    "price": 69.99,
+    "category": "Winter",
+    "description": "A warm, boozy blend of toffee, cardamom, and amber. Built for cold nights and close encounters.",
+    "imageUrl": "./images/azzaro-most-wanted-parfum.png"
+  },
+  {
+    "id": 2,
+    "name": "Jean Paul Gaultier Le Male Le Parfum",
+    "price": 114.99,
+    "category": "Winter",
+    "description": "Powdery iris and cardamom over a smooth vanilla base. Elegant, warm, and built for colder nights.",
+    "imageUrl": "./images/le-male-le-parfum.png"
+  },
+  {
+    "id": 3,
+    "name": "Jean Paul Gaultier Le Male Elixir",
+    "price": 119.99,
+    "category": "Winter",
+    "description": "Honeyed lavender over tonka bean and tobacco. Sweet, dense, and made for freezing weather.",
+    "imageUrl": "./images/le-male-elixir.png"
+  },
+  {
+    "id": 4,
+    "name": "Giorgio Armani Acqua di Giò Profondo",
+    "price": 109.99,
+    "category": "Summer",
+    "description": "Sea notes, bergamot, and aromatic herbs with a mineral finish. A cool, deep-water take on a classic.",
+    "imageUrl": "./images/acqua-di-gio-profondo.png"
+  },
+  {
+    "id": 5,
+    "name": "Jean Paul Gaultier Le Beau",
+    "price": 99.99,
+    "category": "Summer",
+    "description": "Creamy coconut and tonka brightened by bergamot. Smells like a vacation you don't want to end.",
+    "imageUrl": "./images/le-beau.png"
+  },
+  {
+    "id": 6,
+    "name": "Sospiro Vibrato",
+    "price": 329.99,
+    "category": "Summer",
+    "description": "Sparkling bergamot and lemon over orange blossom and soft vanilla. A bright, luxurious citrus for warm days.",
+    "imageUrl": "./images/sospiro-vibrato.png"
+  },
+  {
+    "id": 7,
+    "name": "Prada L'Homme",
+    "price": 114.99,
+    "category": "Spring",
+    "description": "Powdery iris and neroli over soft amber. Polished and fresh, like a crisp white shirt.",
+    "imageUrl": "./images/prada-lhomme.png"
+  },
+  {
+    "id": 8,
+    "name": "Burberry Hero",
+    "price": 94.99,
+    "category": "Spring",
+    "description": "Juniper, bergamot, and a trio of cedarwoods. Green, woody, and easy to wear anywhere.",
+    "imageUrl": "./images/burberry-hero.png"
+  },
+  {
+    "id": 9,
+    "name": "Montblanc Explorer",
+    "price": 74.99,
+    "category": "Spring",
+    "description": "Bergamot and vetiver on an earthy patchouli base. A rugged, versatile scent at a friendly price.",
+    "imageUrl": "./images/montblanc-explorer.png"
+  },
+  {
+    "id": 10,
+    "name": "YSL La Nuit de L'Homme",
+    "price": 104.99,
+    "category": "Fall",
+    "description": "Cardamom and lavender layered over cedar and vetiver. Smooth, seductive, and built for evenings out.",
+    "imageUrl": "./images/la-nuit-de-lhomme.png"
+  },
+  {
+    "id": 11,
+    "name": "Parfums de Marly Layton",
+    "price": 249.99,
+    "category": "Fall",
+    "description": "Crisp apple and lavender melting into vanilla and cardamom. A crowd-pleaser with serious projection.",
+    "imageUrl": "./images/pdm-layton.png"
+  },
+  {
+    "id": 12,
+    "name": "Versace Eros",
+    "price": 89.99,
+    "category": "Fall",
+    "description": "Mint and green apple up top, sweet tonka and vanilla underneath. Loud, playful, and made for going out.",
+    "imageUrl": "./images/versace-eros.png"
+  },
+  {
+    "id": 13,
+    "name": "Bleu de Chanel Eau de Parfum",
+    "price": 154.99,
+    "category": "All-Season",
+    "description": "Citrus, incense, and sandalwood in perfect balance. The definition of a signature scent.",
+    "imageUrl": "./images/bleu-de-chanel-edp.png"
+  },
+  {
+    "id": 14,
+    "name": "Dior Sauvage Eau de Toilette",
+    "price": 119.99,
+    "category": "All-Season",
+    "description": "Peppery bergamot over a bold ambroxan base. Fresh, magnetic, and recognizable from across the room.",
+    "imageUrl": "./images/dior-sauvage-edt.png"
+  },
+  {
+    "id": 15,
+    "name": "YSL Y Eau de Parfum",
+    "price": 124.99,
+    "category": "All-Season",
+    "description": "Apple, ginger, and sage over warm amberwood. Clean enough for the office, sweet enough for date night.",
+    "imageUrl": "./images/ysl-y-edp.png"
+  }
+]
